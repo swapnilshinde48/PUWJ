@@ -1,0 +1,286 @@
+﻿@model Vruttasanstha.Models.NewUserRegister
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+@using(Html.BeginForm())
+{ 
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 10px;">
+
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+        <h3 class="stdHeading">REGISTRATION FORM </h3>
+    </div>
+    @if (TempData["message"] != null)
+    {
+        <div>
+            <label class="col-lg-12 alert-success" style="text-align:center;">@TempData["message"] </label>
+        </div>
+    }
+    
+    <div class="clearfix"></div>
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border"> <a data-toggle="collapse" data-target="#studDetails" href="#">One-Page Registration</a></legend>
+        <div class="control-group  collapse in" id="studDetails">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">First Name</label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.fname, new { id = "rg-from", @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.fname, null, new { style = "color:red;font-size: 16px;" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">Last Name </label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.lname, new { id = "rg-from", @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.lname, null, new { style = "color:red;font-size: 16px;" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">Company Type</label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                       
+                        @Html.DropDownListFor(m => m.Comptype, ViewBag.comptype as List<SelectListItem>, new { id = "rg-from", @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">Company Name</label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.cmpname, new { id = "rg-from", @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.cmpname, null, new { style = "color:red;font-size: 16px;" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">Email Address</label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.emailid, new { id = "rg-from", @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.emailid, null, new { style = "color:red;font-size: 16px;" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">Password</label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.password, new { id = "rg-from", type = "password", @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.password, null, new { style = "color:red;font-size: 16px;" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">Confirm Password</label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.confirmPass, new { id = "rg-from", type = "password", @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.confirmPass, null, new { style = "color:red;font-size: 16px;" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">Business Phone</label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.BPhone, new { id = "rg-from", @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.BPhone, null, new { style = "color:red;font-size: 16px;" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">Billing Country</label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                     
+                        @Html.DropDownListFor(m => m.Countryname, ViewBag.getCountry as List<SelectListItem>, new { @class = "form-control" })
+
+
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">Secret Question</label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                        @Html.DropDownListFor(m => m.questionname, new List<SelectListItem> 
+                   { new SelectListItem { Text = "What street did you grow up on?",Value="What street did you grow up on?" },
+               new SelectListItem{Text="What is your mother's maiden name?",Value="What is your mother's maiden name?"},
+               new SelectListItem{Text="What is the name of your first school?",Value="What is the name of your first school?"},
+               new SelectListItem{Text="What is your pet's name? ",Value="What is your pet's name? "},
+               new SelectListItem{Text="What is your father's middle name? ",Value="What is your father's middle name? "},
+               new SelectListItem{Text="What is your school mascot? ",Value="What is your school mascot? "}},
+new { @class = "form-control", placeholder = "Secret Question", style = "padding:3px 12px;" })
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">Secret Answer</label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.secretAnswer, new { id = "rg-from", @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.secretAnswer, null, new { style = "color:red;font-size: 16px;" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border"> <a data-toggle="collapse" data-target="#interest" href="#">Interests</a></legend>
+        <div class="control-group  collapse in" id="interest">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label class="chechBoxMargin">
+                                @Html.CheckBoxFor(m => m.Marathi, new { @class = "form-control" })
+                                Marathi
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label class="chechBoxMargin">
+                                @Html.CheckBoxFor(m => m.English, new { @class = "form-control" })
+                                English
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label class="chechBoxMargin">
+                                @Html.CheckBoxFor(m => m.GeopolyticalDesk, new { @class = "form-control" })
+                                Geopolitical Desk
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label class="chechBoxMargin">
+                                @Html.CheckBoxFor(m => m.ruralagri, new { @class = "form-control" })
+                                Rural And Agriculture
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label class="chechBoxMargin">
+                                @Html.CheckBoxFor(m => m.economy, new { @class = "form-control" })
+
+
+                                Economy
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label class="chechBoxMargin">
+                                @Html.CheckBoxFor(m => m.image, new { @class = "form-control" })
+
+
+                                Images
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label class="chechBoxMargin">
+                                @Html.CheckBoxFor(m => m.audiovisual, new { @class = "form-control" })
+
+
+                              Videos
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label class="chechBoxMargin">
+                                @Html.CheckBoxFor(m => m.Audio, new { @class = "form-control" })
+
+
+                             Audio
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label class="chechBoxMargin">
+                                @Html.CheckBoxFor(m => m.Assignments, new { @class = "form-control" })
+                                Assignments
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label class="chechBoxMargin">
+                                @Html.CheckBoxFor(m => m.Other, new { @class = "form-control" })
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>*@
+
+
+        </div>
+    </fieldset>
+
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border"> <a data-toggle="collapse" data-target="#termsofUse" href="#">Terms of Use and Privacy Policy</a></legend>
+        <div class="control-group  collapse in" id="termsofUse">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-inline">
+                    <div class="checkbox">
+                        <label class="chechBoxMargin">
+                            @Html.CheckBoxFor(m => m.acceptagri, new { @class = "form-control" })
+                            By checking this box, I agree to the Terms of Use for the AP Images Web site and to the AP Privacy Policy. I understand that if i do not agree to these Terms of Use and the Privacy Policy, I should not check this box and refrain from using the AP Images Web site.
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </fieldset>
+
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border"> <a data-toggle="collapse" data-target="#termsofUse" href="#">Security Code</a></legend>
+        <div class="control-group  collapse in" id="termsofUse">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-horizontal">
+                <div class="form-group">
+                    <label class="col-lg-3 col-md-2 col-sm-12 col-xs-12 control-label lbl_name">CRgtE</label>
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                        <input id="" class="form-control" type="text" value="" name="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </fieldset>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center-block" style="text-align: center;padding:10px;">
+        <input id="btnlogin" type="submit" class="btn btn-primary" value="Create My Account" name="btnRegister" />
+    </div>
+    </div>
+    <div class="clearfix"></div>
+}

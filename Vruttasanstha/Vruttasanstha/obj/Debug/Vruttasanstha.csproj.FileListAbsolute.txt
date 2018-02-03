@@ -1,0 +1,113 @@
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.dll.config
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.pdb
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\Microsoft.Web.Infrastructure.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\Newtonsoft.Json.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.WebRequest.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.Helpers.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.Mvc.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.Razor.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Deployment.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Razor.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\Newtonsoft.Json.xml
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.xml
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.WebRequest.xml
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.Helpers.xml
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.Mvc.xml
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.Razor.xml
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.xml
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Deployment.xml
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Razor.xml
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.csprojResolveAssemblyReference.cache
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.dll
+D:\FurstpersonPOC\Vruttasanstha\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.pdb
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.dll.config
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.pdb
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Microsoft.Web.Infrastructure.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Newtonsoft.Json.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.Formatting.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Helpers.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Http.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Http.WebHost.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Mvc.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Razor.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Deployment.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Razor.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Newtonsoft.Json.xml
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.Formatting.xml
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Helpers.xml
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Http.xml
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Http.WebHost.xml
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Mvc.xml
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Razor.xml
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.xml
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Deployment.xml
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Razor.xml
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.xml
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.csprojResolveAssemblyReference.cache
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.dll
+E:\Backup\Vruttasantha\Vruttasanstha 4.0\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.pdb
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.dll.config
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.pdb
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Microsoft.Web.Infrastructure.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Newtonsoft.Json.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.WebRequest.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Helpers.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Mvc.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Razor.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Deployment.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Razor.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Newtonsoft.Json.xml
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.xml
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.WebRequest.xml
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Helpers.xml
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Mvc.xml
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Razor.xml
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.xml
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Deployment.xml
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Razor.xml
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.csprojResolveAssemblyReference.cache
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.dll
+E:\Abhi\Vruttasanstha\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.pdb
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.dll.config
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Vruttasanstha.pdb
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Newtonsoft.Json.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.Formatting.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.WebRequest.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Helpers.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Http.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Http.WebHost.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Mvc.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Razor.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Deployment.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Razor.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\Newtonsoft.Json.xml
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.xml
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Net.Http.Formatting.xml
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Helpers.xml
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Http.xml
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Http.WebHost.xml
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Mvc.xml
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.Razor.xml
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.xml
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Deployment.xml
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\bin\System.Web.WebPages.Razor.xml
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.dll
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.pdb
+C:\Users\swapnil.shinde\Desktop\Vruttasanstha 4.0-03012018\Vruttasanstha 4.0\Vruttasanstha\Vruttasanstha\obj\Debug\Vruttasanstha.csprojResolveAssemblyReference.cache

@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/CSS/bootstrap.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="~/CSS/modern-business.css" rel="stylesheet" />
+    <link href="~/CSS/CustomStyle.css" rel="stylesheet" />
+    <link href="~/CSS/dataTables.css" rel="stylesheet" />
+    <!-- Custom Fonts -->
+    <link href="~/fonts/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery-2.1.1.js"></script>
+    <script src="~/Scripts/bootstrap-tabcollapse.js"></script>
+    <script src="~/Scripts/dataTables.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function() {
+    $('#example').DataTable();
+     } );
+    </script>
+</head>
+<body style="background-image: url(/Images/Home-Page-Blank-Tout-1-1.jpg);padding-top: 51px;">
+
+    <div class="container" style="background-color:#fff;padding:0px;">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="~/Home/Home" style="padding:5px;"><img src="~/Images/Logo/logo.jpg" height="40px;" /></a>
+                </div>
+               
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right" style="margin:0px;">
+                        <li>
+                            <a href="~/Home/Home">Home</a>
+                        </li>
+                        @*<li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">News <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#"> Marathi </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> English </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Geopolitical </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Financial </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Management </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Legal </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Sports </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Research </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Educational </a>
+                                    </li>
+
+
+                                </ul>
+                            </li>*@
+
+                        <li>
+                            <a href="#">Videos</a>
+                        </li>
+                        <li>
+                            <a href="#">Images</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <table style="width:100%;">
+                                    <tr>
+                                        @{
+                                            @*if (System.Web.HttpContext.Current.Session["Adminname"] != null)
+                                                {
+                                                    <td style="border-right:1px solid #009900;">
+                                                        <a style="color:#009900;">Welcome</a>
+                                                        <a href="~/Admin/admin" style="color:#009900;">@System.Web.HttpContext.Current.Session["Adminname"]&nbsp; </a>
+
+                                                    </td>
+                                                    <td>
+                                                        <a href="~/Home/SignOut" style="color:#009900;padding-left:2px;padding-right:2px;">Sign out</a>
+                                                    </td>
+                                                }else*@
+                                            if (System.Web.HttpContext.Current.Session["User"] != null)
+                                            {
+                                                <td style="border-right:1px solid #fff;">
+                                                    <a style="color:#fff;">Welcome</a>
+                                                    <a href="~/user/user" style="color:#fff;">@System.Web.HttpContext.Current.Session["User"]&nbsp; </a>
+                                                </td>
+                                                <td>
+                                                    <a href="~/user/Changepassword" style="color:#fff;">&nbsp;Change Password&nbsp; </a>
+                                                </td>
+                                                <td>
+                                                    <a href="~/Home/SignOut" style="padding-left:2px;padding-right:2px;color:#fff;">Sign out</a>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td>
+                                                    <a style="color:#fff;" href="~/Login/Login"> &nbsp;Login&nbsp; </a>
+                                                </td>
+                                            }
+                                        }
+                                    </tr>
+                                </table>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+        <div class="clearfix"> </div>
+        <!-- Footer -->
+        <footer style="margin:0px;">
+            <div class="col-lg-12 footerStyle" style="color: #fff; text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;">
+                @*<div class="col-lg-12" style="text-align:justify;font-family:Georgia;padding:0 2%;">
+                Bhartiya Vrutta Sanstha is a news agency delivering in-depth coverage of the current happenings, discoveries, events and other developments in Geopolitics, Rural and Agriculture, Science and Economics, etc. do research on concern fields.
+            </div>*@
+
+                @*<div class="col-lg-3" style="text-align: center;">
+                <img src="~/Images/Logo/logo.jpg" height="50px;" />
+            </div>*@
+
+                <div class="col-lg-12 " style="text-align:center;margin-top:1%;">
+                    @*<ul>
+                    <li class="h-links">
+                        <a target="_blank" href="">Organization Profile</a>
+                    </li>
+                    <li class="h-links">
+                        <a target="_blank" href="">What We Serve</a>
+                    </li>
+                    <li class="h-links">
+                        <a target="_blank" href="">Contact</a>
+                    </li>
+                    <li class="h-links">
+                        <a target="_blank" href="">Legal Disclaime</a>
+                    </li>
+                    <li class="h-links">
+                        <a href="">Code of Conduct</a>
+                    </li>
+                    <li class="h-links">
+                        <a target="_blank" href="http://press.vruttasanstha.org/">Press Room</a>
+                    </li>
+                    <li class="h-links">
+                        <a target="_blank" href="http://216.12.194.8:2095/"> Webmail</a>
+                    </li>
+                    <li class="h-links">
+                        <a target="_blank" href="">Subscribe</a>
+                    </li>
+                    <li class="h-links">
+                        <a target="_blank" href="http://irdc.vruttasanstha.org/">Information Research & Development Center</a>
+                    </li>
+                </ul>*@
+                    <p>सामरिक नीती पञिका २०१७. सर्व हक्क सुरक्षित.</p>
+                </div>
+            </div>
+        </footer>
+    
+
+</body>
+</html>

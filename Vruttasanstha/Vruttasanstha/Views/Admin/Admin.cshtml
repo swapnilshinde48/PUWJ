@@ -1,0 +1,515 @@
+﻿@model Vruttasanstha.Models.uploadnew
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+<script src="~/Scripts/base64js.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#showmessage').show();
+        $(document).on('click', '#deletenews', function () {
+            var jsond = { 'newsid': $('#txtuphiddenid').val() }
+            if (jsond.newsid == null || jsond.newsid == "0")
+                return false;
+            $.ajax({
+                url: "DeleteNews",
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsond),
+                dataType: "json",
+                success: function (data) {              
+                    $('#example2 tr').each(function () {
+                        if ($(this).attr('id') == jsond.newsid) {
+                            $(this).addClass('hide');
+                        }
+                    });
+                 $('#txtuphiddenid').val("");
+                    $('#txtupdtheading').val("");
+                    $('#txtupdatedesc').val("");
+                    $('#txtuphiddenvideo').val("");
+                    $('#imgupload1').attr('src', "");
+                    $('#txtupdtcat option[value=1]').attr("selected", true);
+                },
+                error: function () {
+                },
+            });
+        });
+        $(document).on('click', '.ajaxsubsc', function () {
+            var jsondata = { 'RegId': $(this).attr('id') }
+            $('#txthiddenid').val(jsondata.RegId);
+                $.ajax({
+                    url: "GetSubscription",
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(jsondata),
+                    dataType: "json",
+                    success: function (data) {
+                        $.map(data, function (item) {
+                            if (item.Marathi == 1) {
+                                $('#chkMarathi').prop('checked', true);
+                            }
+                            else {
+                                $('#chkMarathi').prop('checked', false);
+                            }
+                            if (item.English==1)
+                                $('#chkEnglish').prop('checked', true);
+                            else
+                                $('#chkEnglish').prop('checked', false);
+
+                            if (item.Geopolytical == 1)
+                                $('#chkGeoPolitical').prop('checked', true);
+                            else
+                                $('#chkGeoPolitical').prop('checked', false);                           
+                                
+                            if (item.Audio == 1)
+                                $('#chkAudio').prop('checked', true);
+                            else $('#chkAudio').prop('checked', false);
+                                
+                            if (item.images == 1)
+                                    $('#chkImages').prop('checked', true);
+                                else $('#chkImages').prop('checked', false);
+                               
+                              
+                            if (item.Videos == 1)
+                                    $('#chkVideos').prop('checked', true);
+                            else  
+                                    $('#chkVideos').prop('checked', false);
+                             
+
+                            //if (item.RuralAgri == 1)
+                            //    $('#chkruralagri').prop('checked', true);
+                            //else
+                            //    $('#chkruralagri').prop('checked', false);
+
+
+                            if (item.Economical == 1)
+                                $('#chkeconomical').prop('checked', true);
+                            else
+                                $('#chkeconomical').prop('checked', false);
+
+
+                        });
+                    },
+                    error: function (result) {
+                        window.location.href = '../HomeMain/ErrorPage';
+                    },
+                });
+        });
+        $(document).on('click', '#btnsubscribe', function () {
+            var marathi, ruralagri, economical, English, GeoPolitical, Financial, Management, Legal, Sports, Research, Education, Testagainn, Images, Videos, IsNew, RegId,Audio;
+            if ($('#chkMarathi').prop('checked') == true)
+                marathi = 1;
+            else
+                marathi = 0;
+
+            if ($('#chkEnglish').prop('checked') == true)
+                English = 1;
+            else
+                English = 0;
+            if ($('#chkGeoPolitical').prop('checked') == true)
+                GeoPolitical = 1;
+            else
+                GeoPolitical = 0;
+          
+            if ($('#chkAudio').prop('checked') == true)
+                Audio = 1;
+            else
+                Audio = 0;
+            if ($('#chkImages').prop('checked') == true)
+                Images = 1;
+            else
+                Images = 0;
+            if ($('#chkVideos').prop('checked') == true)
+                Videos = 1;
+            else
+                Videos = 0;
+           
+            //if ($('#chkruralagri').prop('checked') == true)
+            //    ruralagri = 1;
+            //else
+            //    ruralagri = 0;
+            
+            if ($('#chkeconomical').prop('checked') == true)
+                economical = 1;
+            else
+                economical = 0;
+
+            RegId = $('#txthiddenid').val();
+            //alert(RegId);
+            if (RegId != 0)
+                IsNew = 0;
+            else
+                IsNew = 1;
+            //alert(IsNew);
+            var jdata = { 'RegId': RegId, 'ruralagri': ruralagri, 'economical': economical, 'IsNew': IsNew, 'Marathi': marathi, 'English': English, 'GeoPolitical': GeoPolitical, 'Images': Images, 'Videos': Videos, 'Audio': Audio }
+            $.ajax({
+                url: "Savesubscription",
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jdata),
+                dataType: "json",
+                success: function (data) {
+                   
+                    //$.map(data, function (item) {
+                    //    alert(item.str);
+                    //    $('#showmessage').show();
+                    //    $('#showmessage').append('<label class="col-lg-12 alert-success" style="text-align:center;">' + item.str + '</label>');
+
+                    //});
+                },
+                error: function (result) {
+                    //window.location.href = '../Home/ErrorPage';
+                },
+            });
+        });
+        $(document).on('click', '.updatenews', function () {
+            var jsondata = { 'NId': $(this).attr('id') }
+            $('#txtuphiddenid').val(jsondata.NId);
+            $.ajax({
+                url: "GetNews",
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsondata),
+                dataType: "json",
+                success: function (data) {
+                    $.map(data, function (item) {
+                        $('#txtuphiddenid').val(item.NId);
+                        $('#txtupdtheading').val(item.NHeading);
+                        $('#txtupdatedesc').val(item.Ndescription);
+                        $("#txtupdtcat option").each(function () {
+                            $(this).removeAttr('selected');
+                        });
+                        $("#txtupdtcat option").each(function () {
+                            if ($(this).val() == item.NCatId) {
+                                $(this).attr('selected', true);
+                            }
+                        });
+                        //$('#txtupdtcat option[value=' + item.NCatId + ']').each(function () {
+                        //    $(this).attr("selected", "selected");
+                        //});
+                        $('#txtupdtcat option[value=' + item.NCatId + ']').attr("selected",true);
+                        if (item.NCategory == "Videos") {
+                            $('#imgupload1').attr('src', "");
+                            $('#txtuphiddenvideo1').text(item.NVideo);
+                            $('#txtuphiddenvideo').val(item.NVideo);
+                        }
+                        else if (item.NCategory == "Audio") {
+                            $('#imgupload1').attr('src', "");
+                            $('#txtuphiddenvideo1').text(item.NVideo);
+                            $('#txtuphiddenvideo').val(item.NVideo);
+                        }
+                        else{
+                            var base64 = base64js.fromByteArray(item.Nimage);
+                            $('#imgupload1').attr('src', "data:image/jpg;base64,"+base64);
+                        }
+                    });
+                },
+                error: function (result) {
+                    window.location.href = '../Home/ErrorPage';
+                },
+            });
+        });
+     
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imgupload').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $('#idcat').append('<option value="0">Homepage</option>');
+
+        $("#imgInp").change(function () {
+            readURL(this);
+        });
+        $(document).on('click', '#paraghaph', function () {
+            $('#rg-from-discription').val($('#rg-from-discription').val() + "&emsp;&emsp;&emsp;");
+        });
+        $(document).on('click', '#linebreak', function () {
+            $('#rg-from-discription').val($('#rg-from-discription').val() + "<br/>");
+        });
+    });
+</script>
+@using(Html.BeginForm("Admin","Admin", FormMethod.Post, new { enctype = "multipart/form-data", style = "padding-top: 21px;" }))
+{
+<ul id="myTab" class="nav nav-tabs" style="margin-bottom: 15px;">
+    <li id="newsuploadclass" class="active"><a href="#NewsUploadTab" data-toggle="tab">News Upload</a></li>
+    <li id="clientauth"><a href="#ClientAuthenticationTab" data-toggle="tab">Client Authentication</a></li>
+    <li id="tabupdate"> <a href="#UpdateTab " data-toggle="tab">Update</a> </li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+   
+    <div class="tab-pane fade in active" id="NewsUploadTab">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border: 1px solid #000; padding: 20px; width: 98%; margin: 10px; ">
+            @if (TempData["saveData"] != null)
+            {
+                <div>
+                    <label class="col-lg-12 alert-success" style="text-align:center;">@TempData["saveData"]</label>
+                </div>
+            }
+            <div class="form-horizontal" style="padding-left:7%;padding-right:7%;">
+                <div>
+                    <label class="alert-danger">To add Paraghaph or new line in description field use Side buttons</label>
+                    <input type="button" class="btn btn-info" id="paraghaph" name="Insert Paraghaph" value="Insert Paraghaph" />
+                    <input type="button" class="btn btn-info" id="linebreak" name="Insert Line break" value="Insert Line break"  />
+                </div><br />
+                <div class="form-group">
+                    <label for="rg-from" class="col-lg-2">Heading : </label>
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(m => m.heading, new { id = "rg-from", @class = "form-control ", style = "width:100%;" })
+                        @Html.ValidationMessageFor(m => m.heading, null, new { style = "color:red;font-size: 16px;" })
+                    </div>
+                </div>
+
+
+                <div class="fileupload fileupload-new" data-provides="fileupload">
+                    <div class="form-group">
+                        <label for="rg-from" class="col-lg-2">Description : </label>
+                        <div class="col-sm-10">
+                           @Html.TextAreaFor(m => m.discription, new { id = "rg-from-discription", @class = "fileupload-preview thumbnail col-lg-9", style = "width: 100%; height: 150px;" })
+                            @Html.ValidationMessageFor(m => m.discription, null, new { style = "color:red;font-size: 16px;" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rg-from" class="col-lg-2">Category : </label>
+                        <div class="col-sm-10">
+                            @Html.DropDownListFor(m => m.catid, ViewBag.Getallcat as List<SelectListItem>, new { @class = "form-control col-lg-9", id = "idcat" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="rg-from" class="col-lg-2">Image,Video,Audio : </label>
+                        <div class="col-sm-10">
+                           @if (Model != null)
+                            {
+                                <img id="imgupload" src="@Model.image" style="height: 100px; width: 200px;" />
+                            }
+                            @Html.TextBoxFor(m => m.NLImage, new { type = "file", id = "imgInp", @class = "file_upload" })
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="rg-from" class="col-lg-2">Uploaded By : </label>
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(m => m.uploadedby, new { @class = "form-control col-lg-9" })
+                    </div>
+                </div>
+                </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;" >
+                <input type="submit" name="submit" value="submit" class="btn btn-success" />
+            </div>
+            </div>
+
+    </div>
+    
+    <div class="tab-pane fade" id="ClientAuthenticationTab">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border: 1px solid #000; padding: 20px; width: 98%; margin: 10px;">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+                <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Clients</th>
+                        </tr>
+                    </thead>
+                    @*<tfoot>
+                        <tr>
+                            <th>Mail</th>
+                        </tr>
+                    </tfoot>*@
+                    <tbody>
+                        @if (Model != null)
+                        {
+                            for (int i = 0; i < Model.un.Count; i++)
+                            {
+                                <tr>
+
+                                    <td class="ajaxsubsc" id="@Model.un[i].rid" style="color:blue;text-decoration:underline;">@Model.un[i].user</td>
+                                </tr>
+                            }
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="padding:10px;">
+                @if (Model != null)
+                {
+                    for (int i = 0; i < Model.un.Count; i++)
+                    {
+                        @Html.HiddenFor(m => m.hiddenid, new { id = "txthiddenid", @class = Model.un[0].rid })
+
+                    }
+                }
+                <label>Client Subscription</label>
+                <form class="form-inline">
+                    <div class="checkbox">
+                        <label>
+                            <input id="chkMarathi" type="checkbox" /> Marathi
+                        </label>
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <div class="checkbox">
+                        <label>
+                            <input id="chkEnglish" type="checkbox" /> English
+                        </label>
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <div class="checkbox">
+                        <label>
+                            <input id="chkGeoPolitical" type="checkbox" /> Geo Political Desk
+                        </label>
+                    </div>
+                </form>
+               
+                <form class="form-inline">
+                    <div class="checkbox">
+                        <label>
+                            <input id="chkAudio" type="checkbox" /> Audio
+                        </label>
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <div class="checkbox">
+                        <label>
+                            <input id="chkImages" type="checkbox" /> Images
+                        </label>
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <div class="checkbox">
+                        <label>
+                            <input id="chkVideos" type="checkbox" /> Videos
+                        </label>
+                    </div>
+                </form>
+                @*<form class="form-inline">
+                    <div class="checkbox">
+                        <label>
+                            <input id="chkruralagri" type="checkbox" /> Background Images
+                        </label>
+                    </div>
+                </form>*@
+                <form class="form-inline">
+                    <div class="checkbox">
+                        <label>
+                            <input id="chkeconomical" type="checkbox" /> Economical
+                        </label>
+                    </div>
+                </form>
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+                    <button id="btnsubscribe" type="button" class="btn btn-success">Subscribe</button>
+                    <button id="btnunsubscribe" type="button" class="btn btn-danger">Unsubscribe</button>
+                </div>
+                <div id="showmessage">
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    <div class="tab-pane fade" id="UpdateTab">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border: 1px solid #000; padding: 20px; width: 98%; margin: 10px; ">
+             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="">
+                <table id="example2" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>News</th>
+                            <th>Image,Video,Audio</th>
+                            <th>Date And Time</th>
+                        </tr>
+                    </thead>
+                    @*<tfoot>
+                        <tr>
+                            <th>News</th>
+                            <th>Images</th>
+                            <th>Date And Time</th>
+                        </tr>
+                    </tfoot>*@
+                    <tbody>
+                        @if (Model != null)
+                        {
+                            for (int i = 0; i < Model.un1.Count; i++)
+                            {
+                                <tr class="updatenews" id="@Model.un1[i].NId">
+                                    <td>@Model.un1[i].heading</td>
+                                    @if(@Model.un1[i].Videoaudio!="" && @Model.un1[i].Videoaudio!=null){
+                                    <td>@Model.un1[i].Videoaudio</td>
+                                    }else{
+                                    <td><img src="@Model.un1[i].image" style="height: 100px; width: 100px;" /></td>
+
+                                    }
+                                    <td>@Model.un1[i].createdDate</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-horizontal" style="padding-left:7%;padding-right:7%;">
+                    <div class="form-group">
+                        <label for="rg-from" class="col-lg-3">Heading : </label>
+                        <div class="col-sm-9">
+                            @Html.HiddenFor(m => m.uphiddenid, new { id = "txtuphiddenid" })
+
+                            @Html.TextBoxFor(m => m.heading1, null, new { id = "txtupdtheading", @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rg-from" class="col-lg-3">Description : </label>
+                        <div class="col-sm-9">
+                            @Html.TextAreaFor(m => m.discription1, new { id = "txtupdatedesc", @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                        <div class="form-group">
+                            <label for="rg-from" class="col-lg-3">Image : </label>
+                            <div class="col-sm-9">
+                                @*@if (Model != null)
+                                {*@
+                                <img id="imgupload1" style="height: 100px; width: 200px;" />
+                                @*}*@
+                                @Html.TextBoxFor(m => m.NLImage1, new { type = "file", id = "imgInp", @class = "file_upload" })
+                            </div>
+                            <div id="txtuphiddenvideo1"></div>
+                        </div>
+                    </div>
+                    @Html.HiddenFor(m => m.Videoaudio1, new { id = "txtuphiddenvideo" })
+                    <div class="form-group">
+                        <label for="rg-from" class="col-lg-3">Category : </label>
+                        <div class="col-sm-9">
+                            @Html.DropDownListFor(m => m.catid1, ViewBag.cat as List<SelectListItem>, new { id = "txtupdtcat", @class = "form-control" })
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+                    <input type="submit" id="savenews" name="Update" value="Update" class="btn btn-success" />
+                    <input type="button" class="btn btn-success" id="deletenews" value="Delete">
+                </div>
+            </div>
+        </div>
+   </div>
+</div>
+}
+<script type="text/javascript">
+    $('#myTab').tabCollapse();
+</script>
+<div class="clearfix"></div>

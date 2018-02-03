@@ -1,0 +1,187 @@
+﻿﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/CSS/bootstrap.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="~/CSS/modern-business.css" rel="stylesheet" />
+    <!-- Custom Fonts -->
+    <link href="~/CSS/CustomStyle.css" rel="stylesheet" />
+    <link href="~/fonts/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/CSS/marquee.css" rel="stylesheet" />
+    <link href="~/CSS/divscroll.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery-2.1.1.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            var w = window,
+               d = document,
+               e = d.documentElement,
+               g = d.getElementsByTagName('body')[0],
+               x = w.innerWidth || e.clientWidth || g.clientWidth,
+               y = w.innerHeight || e.clientHeight || g.clientHeight;
+            var adj_height = y - 110;
+            $(".fixDivStudent").height(adj_height);
+
+        });
+
+        $(document).ready(function () {
+            $("#attach_box").click(function () {
+                $("#loginbox").toggle()
+            });
+        });
+
+
+    </script>
+    <style>
+        .login_bg {
+            background: url(../Images/Logo/MatuaAnkov.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .textShadow {
+            color: #0b031d;
+            text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /*-------------for login text field-------------*/
+        .form-control {
+            height: 28px;
+            padding: 3px 5px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    @*<div class="container" style="padding:0px;">*@
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @* <a class="navbar-brand" href="~/Home/Home" style="padding:5px;"><img src="~/Images/Logo/logo.jpg" height="40px;" /></a>*@
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" style="margin:0px;">
+                    @*<li>
+                            <a href="~/Home/Home">Home</a>
+                        </li>*@
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">वृत्तसंस्था <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#"> संस्थेची ओळख </a>
+                            </li>
+                            <li>
+                                <a href="#"> वापर करण्याचे निकष </a>
+                            </li>
+                            <li>
+                                <a href="#"> सेवा ग्रहण करा </a>
+                            </li>
+                            <li>
+                                <a href="#"> संपर्क </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" id="attach_box" class="dropdown-toggle" data-toggle="dropdown">प्रवेश <b class="caret"></b></a>
+
+                    </li>
+
+                    @*<li>
+                            <a href="contact.html">Videos</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Images</a>
+                        </li>
+                        <li>
+                            <a href="~/Home/AboutUs">About Us</a>
+                        </li>
+                        <li>
+                            <a href="services.html">Contact Us</a>
+                        </li>*@
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    @RenderBody()
+
+    @* </div>*@
+    <div class="clearfix"> </div>
+    <!-- Footer -->
+    <footer style="margin:0px;">
+        <div class="col-lg-12 footerStyle" style="color: #fff; text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;">
+            @*<div class="col-lg-12 " style="text-align:center;font-family:Georgia;padding:0 2%;font-size:16px;">
+                    ‘भावृसं’ ही मराठी भाषेत वृत्तसेवा प्रदान करणारी स्वतंञ आणि प्रमुख वृत्तसंस्था असून, सह्याद्री न्यूजकॉर्प्स या कंपनीच्या सामरिक निती पञिका या प्रकाशनाद्वारे वृत्तसेवेचे संचालन केले जाते.
+                </div>*@
+
+            @*<div class="col-lg-3" style="text-align: center;">
+                    <img src="~/Images/Logo/logo.jpg" height="50px;" />
+                </div>*@
+
+            <div class="col-lg-12 " style="text-align:center;">
+                <ul>
+                    @*<li class="h-links">
+                            <a target="_blank" href="">संस्थेची ओळख</a>
+                        </li>
+                        <li class="h-links">
+                            <a target="_blank" href="">वापर करण्याचे निकष</a>
+                        </li>
+                        <li class="h-links">
+                            <a target="_blank" href="">सेवा ग्रहण करा</a>
+                        </li>
+                        <li class="h-links">
+                            <a target="_blank" href="">संपर्क</a>
+                        </li>*@
+                    @*<li class="h-links">
+                            <a href="">Code of Conduct</a>
+                        </li>
+                        <li class="h-links">
+                            <a target="_blank" href="http://press.vruttasanstha.org/">Press Room</a>
+                        </li>
+                        <li class="h-links">
+                            <a target="_blank" href="http://216.12.194.8:2095/"> Webmail</a>
+                        </li>
+                        <li class="h-links">
+                            <a target="_blank" href="">Subscribe</a>
+                        </li>
+                        <li class="h-links">
+                            <a target="_blank" href="http://irdc.vruttasanstha.org/">Information Research & Development Center</a>
+                        </li>*@
+                </ul>
+                <p>सामरिक नीती पञिका २०१७. सर्व हक्क सुरक्षित.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

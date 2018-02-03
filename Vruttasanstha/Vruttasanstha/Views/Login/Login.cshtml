@@ -1,0 +1,123 @@
+﻿@model Vruttasanstha.Models.Login
+
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/Login_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+
+
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fixDivStudent" style="padding: 10px;height: 617px;">
+
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                @for (int i = 0; i < ViewBag.news.Rows.Count; i++)
+                {
+                    //byte[] arr = (byte[])ViewBag.news.Rows[i]["Nimage"];
+                    //string ImgSource = "data:image/jpg;base64," + Convert.ToBase64String(arr);
+                    string active = string.Empty;
+                    if (i == 0)
+                    {
+                        active = "active";
+                    }
+                    if (i > 0)
+                    {
+                        active = "";
+                    }
+                    <div class='item @active'>
+                        <img src="~/images/@ViewBag.news.Rows[i]["NVideo"]" alt=@ViewBag.news.Rows[i]["NHeading"] style="width:100%;height: 600px;">
+                        <div class="carousel-caption" style="padding-bottom: 115px;">
+                            <h3>@ViewBag.news.Rows[i]["NHeading"]</h3>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+
+            <!-- Left and right controls -->
+            @*<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>*@
+        </div>
+        <div class="container">
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            </div>
+            <div id="loginbox" class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding: 15px; background-color: #fff; border-radius: 5px; display: none; position: absolute; right: 103px; top: 15px;">
+                <div class="login_box">
+                    <div class="form-group">
+                        <label class="textShadow" for="exampleInputEmail1" style="font-weight: normal; font-size: 14px; margin-bottom:5px;">Have an account? </label>
+                        @Html.TextBoxFor(m => m.username, new { id = "exampleInputEmail1", @class = "form-control", placeholder = "नाव" })
+                        @Html.ValidationMessageFor(m => m.username, null, new { style = "color: red" })
+                    </div>
+                    <div class="form-group" style="margin-bottom:0px;">
+                        @Html.TextBoxFor(m => m.password, new { id = "exampleInputPassword1", type = "password", placeholder = "सांकेतिक शब्द", @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.password, null, new { style = "color: red" })
+                    </div>
+                    @if (ViewBag.message != null)
+                {
+                        <div>
+                            <label class="col-lg-12 alert-danger" style="text-align:center;">@ViewBag.message </label>
+                        </div>
+                    }
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;padding:0px;">
+                        <div class="checkbox">
+                            <label style="font-weight: normal; padding-left:0px;">
+                                <a href="#" class="textShadow" data-toggle="modal" data-target="#forgotpass" style="font-size: 14px;">प्रवेश करता येत नाही ? </a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:0px;">
+                        <input id="btnlogin" type="submit" class="btn btn-primary" style="width:100%;border-radius:16px;" value="प्रवेश" name="btnlogin" />
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <hr style="margin-bottom:10px;margin-top:10px;" />
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:0px;">
+                        <a href="~/Home/Registration" class="btn btn-default" style="width:100%;border-radius:16px;">नविन नोंद करा  </a>
+                    </div>
+                </div>
+                <span style="color: red"><label class="alert-danger">@ViewBag.data</label></span>
+            </div>
+
+            <div style="position:absolute;bottom:10px;">
+                <p style="color: white;font-size: 18px;font-weight: bold;margin:0px;">सामरिक निती पञिका</p>
+                <div class="content">
+                    <div class="simple-marquee-container">
+                        <div class="marquee-sibling">
+                            वृत्तसंस्था
+                        </div>
+                        <div class="marquee">
+                            <ul class="marquee-content-items">
+                                @foreach (System.Data.DataRow row in ViewBag.marathinews.Rows)
+                                {
+                                    <li>@row["NHeading"]</li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                @*<p style="color:white;font-size:13px;">‘भावृसं’ ही मराठी भाषेत वृत्तसेवा प्रदान करणारी स्वतंञ आणि प्रमुख वृत्तसंस्था असून, सह्याद्री न्यूजकॉर्प्स या कंपनीच्या सामरिक निती पञिका या प्रकाशनाद्वारे वृत्तसेवेचे संचालन केले जाते.</p>*@
+            </div>
+            <script src="~/Scripts/marquee.js"></script>
+            <script>
+                $(function () {
+                    $('.simple-marquee-container').SimpleMarquee();
+                });
+            </script>
+        </div>
+    </div>
+}
